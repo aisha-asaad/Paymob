@@ -1,0 +1,59 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 392cad2 (Initial commit for HrSystem project)
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    container_name: hr_db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234567890
+      POSTGRES_DB: hr_system
+      restart:
+        always
+    ports:
+      - "5432:5432"
+    volumes:
+      - "E:/hr/postgres_data:/var/lib/postgresql/data"
+    networks:
+      - hr_network
+
+volumes:
+  db_data:
+
+networks:
+  hr_network:
+<<<<<<< HEAD
+=======
+=======
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-paymob
+    ports:
+      - "5432:5432"
+    volumes:
+      - "E:/paymenti/postgres_data:/var/lib/postgresql/data"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123
+      - POSTGRES_DB=paymob
+
+#  mail-dev:
+#    container_name: mail-dev-bsn
+#    image: maildev/maildev
+#    ports:
+#      - 1080:1080
+#      - 1025:1025
+
+volumes:
+  data: {}
+
+
+networks:
+  default:
+    name: postgres_network
+>>>>>>> 272bfb3 (Initial commit for HrSystem project)
+>>>>>>> 392cad2 (Initial commit for HrSystem project)
